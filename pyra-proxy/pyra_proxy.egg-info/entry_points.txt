@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = pyraproxy:main
+      [console_scripts]
+      initialize_pyra-proxy_db = pyraproxy.scripts.initializedb:main
+      
