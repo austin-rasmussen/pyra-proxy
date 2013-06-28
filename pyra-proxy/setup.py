@@ -14,6 +14,9 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
+    'pyramid_jinja2',
+    'requests',
+    'mock'
     ]
 
 setup(name='pyra-proxy',

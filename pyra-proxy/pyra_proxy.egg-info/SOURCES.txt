@@ -18,6 +18,7 @@ pyraproxy/tests.py
 pyraproxy/views.py
 pyraproxy/scripts/__init__.py
 pyraproxy/scripts/initializedb.py
+pyraproxy/static/example.jpg
 pyraproxy/static/favicon.ico
 pyraproxy/static/footerbg.png
 pyraproxy/static/headerbg.png

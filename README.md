@@ -1,10 +1,10 @@
 Pyramid Proxy (pyra-proxy)
 ==========
 
-:Author:
+Author:
     Austin Rasmussen
 
-:Version: 0.1
+Version: 0.1
 
 
 HTTP Proxy utilizing the Pyramid Framework
