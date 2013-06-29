@@ -17,4 +17,6 @@ class HomeView(object):
 		request_url = self.request.path_info[1:]
 		# Split off the protocol
 		content = requests.get('http://%s?%s' % (request_url.split(':/', 1)[-1], self.request.query_string), stream=True)
-		return Response(app_iter=content.iter_content(chunk_size=512*1024), headers=content.headers)
+		headers = content.headers
+		headers.pop('transfer-encoding', None)
+		return Response(app_iter=content.iter_content(chunk_size=512*1024), headers=headers)
