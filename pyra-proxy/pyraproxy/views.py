@@ -15,5 +15,6 @@ class HomeView(object):
 	@view_config(route_name='home', renderer='templates/mytemplate.pt')
 	def mirror(self):
 		request_url = self.request.path_info[1:]
-		content = requests.get('http://%s' % request_url)
-		return Response(content.content, headers={'Content-Type': content.headers['content-type']})
+		# Split off the protocol
+		content = requests.get('http://%s?%s' % (request_url.split(':/', 1)[-1], self.request.query_string))
+		return Response(content.content, headers=content.headers)

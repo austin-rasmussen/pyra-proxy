@@ -41,3 +41,4 @@ bin
 lib
 include/python2.6/*
 include/python2.6
+*.ini
