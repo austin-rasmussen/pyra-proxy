@@ -28,4 +28,5 @@ pyraproxy/static/pylons.css
 pyraproxy/static/pyramid-small.png
 pyraproxy/static/pyramid.png
 pyraproxy/static/transparent.gif
+pyraproxy/static/js/placeholder.js
 pyraproxy/templates/mytemplate.pt
