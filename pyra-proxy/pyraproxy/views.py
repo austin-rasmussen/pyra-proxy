@@ -19,4 +19,7 @@ class HomeView(object):
 		content = requests.get('http://%s?%s' % (request_url.split(':/', 1)[-1], self.request.query_string), stream=True)
 		headers = content.headers
 		headers.pop('transfer-encoding', None)
+		headers.pop('content-encoding', None)
+		if headers.get('content-type', None) <> 'application/octet-stream':  headers.pop('content-length', None)
+		
 		return Response(app_iter=content.iter_content(chunk_size=512*1024), headers=headers)
